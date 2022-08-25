@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container py-3 mb-5">
+            <div class="text-center font-weight-bold text-info">Products</div>
+
+            <div class="form-group">
+                <label>Proudect Name :</label>
+                <input onkeyup="validateForm(this.value)" id="productNameInp" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Proudect Price :</label>
+                <input id="productPriceInp" class="form-control">
+            </div>           
+
+            <div class="form-group">
+                <label>Proudect Category :</label>
+                <input id="productCategoryInp" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Proudect Descreption :</label>
+                <textarea id="productDescreptionInp" class="form-control"></textarea>
+            </div>
+
+            <button id="addBtn" onclick="addProduct()" class="btn btn-info float-right">Add Product</button>
+        </div>
+
+        <div class="container-fluid">
+            <h1 class="text-center text-info mb-4">Our Products</h1>
+            <input onkeyup="productSearch(this.value)" placeholder="search" class="form-control w-50 m-auto" >
+            <div class="row m-5" id="productRow">
+
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+</html>
